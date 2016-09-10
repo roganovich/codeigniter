@@ -1,0 +1,12 @@
+CREATE TABLE news(
+id int(11) NOT NULL AUTO_INCREMENT,
+title varchar(128) NOT NULL,
+slug varchar(128) NOT NULL,
+text text NOT NULL,
+create_date datetime default CURRENT_TIMESTAMP,
+update_date datetime default CURRENT_TIMESTAMP,
+visit int(255) NOT NULL,
+PRIMARY KEY (id),
+KEY slug(slug),
+UNIQUE (slug)
+)
