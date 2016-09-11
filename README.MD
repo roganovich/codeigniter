@@ -1,9 +1,9 @@
 ## Установка и Автозагрузка
 
-+Клонировать репозиторий 
-  git@github.com:roganovich/codeigniter.git
+*Клонировать репозиторий 
+  [git@github.com:roganovich/codeigniter.git]
 
-+Инмортировать базу данных 
+*Инмортировать базу данных 
   codeIgniter.sql
 
 
