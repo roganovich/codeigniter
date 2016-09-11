@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-09-11 13:57:37
-  from "C:\Program Files (x86)\Ampps\www\codeigniter\application\views\templates\news\index.tpl" */
+/* Smarty version 3.1.30, created on 2016-09-11 14:07:43
+  from "C:\Program Files (x86)\Ampps\www\codeigniter\application\views\templates\news\admin.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_57d562d193a872_54808080',
+  'unifunc' => 'content_57d5652f3b4fa7_39407277',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '443d390bef94db9c4d64d90bb08b5f25d470475e' => 
+    '403f0e79dec81d8d9477d0b179a3ef415a7015db' => 
     array (
-      0 => 'C:\\Program Files (x86)\\Ampps\\www\\codeigniter\\application\\views\\templates\\news\\index.tpl',
-      1 => 1473602256,
+      0 => 'C:\\Program Files (x86)\\Ampps\\www\\codeigniter\\application\\views\\templates\\news\\admin.tpl',
+      1 => 1473602861,
       2 => 'file',
     ),
   ),
@@ -20,52 +20,67 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_57d562d193a872_54808080 (Smarty_Internal_Template $_smarty_tpl) {
+function content_57d5652f3b4fa7_39407277 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <h1> <?php echo $_smarty_tpl->tpl_vars['data']->value['title'];?>
  </h1>
 
+<div class="row">
+<a class="btn btn-primary" href="/news/edit/new" title="Добавить новость">Добавить новость</a>
+</div>
+<hr>
+<div class="row">
 <?php if ($_smarty_tpl->tpl_vars['data']->value['news']) {?>
     <div class="row">
-        <?php
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <td>category</td>
+                    <td>slug</td>
+                    <td>title</td>
+                    <td>text</td>
+                    <td>create</td>
+                    <td>update</td>
+                    <td>edit</td>
+                    <td>delete</td>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['data']->value['news'], 'item');
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['item']->value) {
 ?>
-            <div class="col-xs-4 col-md-3 ">
-                <div class="thumbnail news-item">
-                    <div class="news-title">
-                        <a href="news/view/<?php echo $_smarty_tpl->tpl_vars['item']->value['slug'];?>
-">
-                            <?php if ($_smarty_tpl->tpl_vars['item']->value['thumb']) {?>
-                                <img src="/assets/img/<?php echo $_smarty_tpl->tpl_vars['item']->value['thumb'];?>
-" alt="thumb">
-                            <?php } else { ?>
-                                <img src="/assets/img/noFile.png" alt="thumb">
-                            <?php }?>
-                            <span><?php echo $_smarty_tpl->tpl_vars['item']->value['title'];?>
-</span>
-                        </a>
-                    </div>
-                    <div class="news-text"><?php echo $_smarty_tpl->tpl_vars['item']->value['text'];?>
-</div>
-                    <div class="news-date"><?php echo $_smarty_tpl->tpl_vars['item']->value['update_date'];?>
-</div>
-                </div>
-            </div>
-        <?php
+                    <tr>
+                        <td><?php echo $_smarty_tpl->tpl_vars['item']->value['name'];?>
+</td>
+                        <td><a href="/news/view/<?php echo $_smarty_tpl->tpl_vars['item']->value['slug'];?>
+"><?php echo $_smarty_tpl->tpl_vars['item']->value['slug'];?>
+ </a></td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['item']->value['title'];?>
+</td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['item']->value['text'];?>
+ </td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['item']->value['create_date'];?>
+</td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['item']->value['update_date'];?>
+</td>
+                        <td><a href="/news/edit/<?php echo $_smarty_tpl->tpl_vars['item']->value['slug'];?>
+">edit </a></td> 
+                        <td><a href="/news/delete/<?php echo $_smarty_tpl->tpl_vars['item']->value['slug'];?>
+">delete</a></td> 
+                    </tr>
+                <?php
 }
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
 ?>
 
+            </tbody>
+        </table>
     </div>
-<?php } else { ?>
-    Hi, <?php echo $_smarty_tpl->tpl_vars['data']->value['title'];?>
-!
 <?php }?>
-
-
+</div>
 
 
 <nav aria-label="Page navigation">
@@ -91,7 +106,7 @@ $_smarty_tpl->tpl_vars['page']->first = $_smarty_tpl->tpl_vars['page']->iteratio
             <li>
         <?php }?>
       <a href="<?php echo $_smarty_tpl->tpl_vars['data']->value['pagination']['base_url'];?>
-/index/<?php echo $_smarty_tpl->tpl_vars['page']->value;?>
+/<?php echo $_smarty_tpl->tpl_vars['page']->value;?>
 " aria-label="Previous">
         <span aria-hidden="true"><?php echo $_smarty_tpl->tpl_vars['page']->value;?>
 </span>

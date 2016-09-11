@@ -1,0 +1,39 @@
+.thumb {
+    max-width: 50px;
+}
+.view {
+    float:left;
+    max-width: 200px;
+}
+
+thead td{
+    background-color: #222;
+    color:#fff;
+    text-align: center;
+}
+
+.news-text{
+    position: absolute;
+    bottom: 35px;
+    height: 140px;
+    overflow: hidden;
+}
+
+.news-item{
+    position: relative;
+    height: 400px;
+}
+
+.news-date{
+    position: absolute;
+    bottom: 5px;
+    color:red;
+}
+
+.news-title a img{
+    max-height: 200px;
+}
+
+.news-title a span{
+   font-size: 20px;
+}
