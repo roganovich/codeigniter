@@ -11,7 +11,8 @@ class Category extends CI_Controller{
     public function __construct() {
         parent::__construct();
         $this->load->model('CategoryModel');
-        $this->custom_smarty->assign('user_info',$this->session->userdata('login'));
+        
+        $this->custom_smarty->assign('user_info',$this->session->userdata('logged_in'));
     }
 
     
