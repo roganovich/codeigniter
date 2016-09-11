@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-09-11 13:57:37
+/* Smarty version 3.1.30, created on 2016-09-11 21:35:06
   from "C:\Program Files (x86)\Ampps\www\codeigniter\application\views\templates\news\index.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_57d562d193a872_54808080',
+  'unifunc' => 'content_57d5a3da3331f4_27935299',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '443d390bef94db9c4d64d90bb08b5f25d470475e' => 
     array (
       0 => 'C:\\Program Files (x86)\\Ampps\\www\\codeigniter\\application\\views\\templates\\news\\index.tpl',
-      1 => 1473602256,
+      1 => 1473618905,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_57d562d193a872_54808080 (Smarty_Internal_Template $_smarty_tpl) {
+function content_57d5a3da3331f4_27935299 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <h1> <?php echo $_smarty_tpl->tpl_vars['data']->value['title'];?>
  </h1>
@@ -35,6 +35,8 @@ foreach ($_from as $_smarty_tpl->tpl_vars['item']->value) {
             <div class="col-xs-4 col-md-3 ">
                 <div class="thumbnail news-item">
                     <div class="news-title">
+                         <h4><?php echo $_smarty_tpl->tpl_vars['item']->value['name'];?>
+</h4>
                         <a href="news/view/<?php echo $_smarty_tpl->tpl_vars['item']->value['slug'];?>
 ">
                             <?php if ($_smarty_tpl->tpl_vars['item']->value['thumb']) {?>
@@ -43,8 +45,8 @@ foreach ($_from as $_smarty_tpl->tpl_vars['item']->value) {
                             <?php } else { ?>
                                 <img src="/assets/img/noFile.png" alt="thumb">
                             <?php }?>
-                            <span><?php echo $_smarty_tpl->tpl_vars['item']->value['title'];?>
-</span>
+                            <h3><?php echo $_smarty_tpl->tpl_vars['item']->value['title'];?>
+</h3>
                         </a>
                     </div>
                     <div class="news-text"><?php echo $_smarty_tpl->tpl_vars['item']->value['text'];?>

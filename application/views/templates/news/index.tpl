@@ -6,13 +6,14 @@
             <div class="col-xs-4 col-md-3 ">
                 <div class="thumbnail news-item">
                     <div class="news-title">
+                         <h4>{$item.name}</h4>
                         <a href="news/view/{$item.slug}">
                             {if $item.thumb}
                                 <img src="/assets/img/{$item.thumb}" alt="thumb">
                             {else}
                                 <img src="/assets/img/noFile.png" alt="thumb">
                             {/if}
-                            <span>{$item.title}</span>
+                            <h3>{$item.title}</h3>
                         </a>
                     </div>
                     <div class="news-text">{$item.text}</div>

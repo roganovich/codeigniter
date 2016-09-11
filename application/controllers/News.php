@@ -20,6 +20,7 @@ class News extends CI_Controller{
     public function index() {
         $data['title']='Список новостей';
         
+        $data['category']=$this->CategoryModel->getCategoryList(); 
         $config['base_url'] = '/news'; // адрес где происходит построение навигации
         $config['total_rows'] = $this->db->count_all('news'); // сколько всего записей в этой таблице, откуда будем брать записи. Используем данную функцию для подсчета всех записей.
         $config['per_page'] = 5; // сколько записей показывать на странице
